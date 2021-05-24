@@ -2,14 +2,23 @@
 name: Primer Workflow Gianmarco
 on: 
   schedule:
-    - cron: "*0/3 * * * *"
+    - cron: "0/3 * * * *"
 
 jobs:
-  prueba-con-cron:
-   runs-on: ubuntu-20.04
-   steps:
-     - name: cron scheduler
-       run: echo "--> Cron"
+  repository_dispatch:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: repository dispatch
+      - run: > 
+          curl -X POST -H "Accept: application/vnd.github.v3+json" 
+          https://api.github.com/repos/gianmarco33/practica10-GitHubActions/dispatches 
+          -d '{"event_type":"desde_curl"}' 
+          -u ": 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"
+  #prueba-con-cron:
+  # runs-on: ubuntu-20.04
+  # steps:
+  #   - name: cron scheduler
+  #     run: echo "--> Cron"#
 
   #ejecutar-comandos-shell:
   #  runs-on: ubuntu-20.04
