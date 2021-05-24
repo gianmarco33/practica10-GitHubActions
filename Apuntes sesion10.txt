@@ -1,0 +1,11 @@
+git init
+git config --global alias.lg "log --oneline --decorate --all --graph"
+git config --global alias.s "status -s -b"
+cd .git
+
+git add .
+git commit -m "texto"
+git push -u origin main ------> despues solo git push
+git branch -M main
+git config credential.helper store
+

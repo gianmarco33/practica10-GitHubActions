@@ -13,4 +13,9 @@ jobs:
           mvn -v
           node -v
           cat /etc/os-release
+      - name: Python console
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
   
