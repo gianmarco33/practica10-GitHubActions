@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: echo cadena
-        run: eccho "Hello World"
+        run: echo "Hello World"
       - name: scripts multitarea
         run: |
           maven -v
