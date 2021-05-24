@@ -9,11 +9,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: repository dispatch
-      - run: > 
-          curl -X POST -H "Accept: application/vnd.github.v3+json" 
-          https://api.github.com/repos/gianmarco33/practica10-GitHubActions/dispatches 
-          -d '{"event_type":"desde_curl"}' 
-          -u ": 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"
+      - run: echo "Acivado por remoto"
   #prueba-con-cron:
   # runs-on: ubuntu-20.04
   # steps:
