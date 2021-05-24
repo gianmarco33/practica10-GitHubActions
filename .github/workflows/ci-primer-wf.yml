@@ -10,7 +10,7 @@ jobs:
         run: echo "Hello World"
       - name: scripts multitarea
         run: |
-          maven -v
+          mvn -v
           node -v
           cat /etc/os-release
   
