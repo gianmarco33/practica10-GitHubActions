@@ -1,0 +1,16 @@
+---
+name: Primer Workflow Gianmarco
+on: [push]
+
+jobs:
+  ejecutar-comandos-shell:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: echo cadena
+        run: eccho "Hello World"
+      - name: scripts multitarea
+        run: |
+          maven -v
+          node -v
+          cat /etc/os-release
+  
