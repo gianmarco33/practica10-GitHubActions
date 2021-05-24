@@ -1,8 +1,8 @@
 ---
 name: Primer Workflow Gianmarco
 on: 
-  schedule:
-    - cron: "0/3 * * * *"
+  repository_dispatch:
+    types: [push]
 
 jobs:
   repository_dispatch:
