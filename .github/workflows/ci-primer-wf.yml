@@ -2,7 +2,7 @@
 name: Primer Workflow Gianmarco
 on: 
   repository_dispatch:
-    types: [push]
+    types: [desde_curl]
 
 jobs:
   repository_dispatch:

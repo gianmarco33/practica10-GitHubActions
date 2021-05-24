@@ -11,3 +11,9 @@ git config credential.helper store
 
 
 TOKEN: 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
+
+
+curl -X POST -H "Accept: application/vnd.github.v3+json" \
+   https://api.github.com/repos/gianmarco33/practica10-GitHubActions/dispatches \
+   -d '{"event_type":"desde_curl"}' \
+   -u ":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"
