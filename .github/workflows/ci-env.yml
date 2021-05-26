@@ -1,0 +1,17 @@
+---
+name: Variables de entorno
+on: [push]
+env:
+  WF_ENV: Global Variable
+jobs:
+  log-env:
+    runs-on: ubuntu-latest
+    env:
+      JOB_ENV: Job Variable
+    steps:
+      - name: paso1
+        env:
+          STEP_ENV: Step Variable
+        run: echo "Hola"
+
+    
