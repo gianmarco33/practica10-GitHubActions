@@ -8,10 +8,19 @@ jobs:
     
     steps:
       - name: paso1
+        uses: stCarolas/setup-maven@v4
+        with:
+          maven-version: 3.5.4
+      - name: paso2
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '8'
+      - name: paso3
         run: |
             java -version 
             mvn -version
-      - name: paso2
+      - name: paso4
         run: git clone https://github.com/wakaleo/game-of-life.git .
-      - name: paso3
+      - name: paso5
         run: mvn test
