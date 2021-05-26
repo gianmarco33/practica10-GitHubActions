@@ -12,3 +12,9 @@ jobs:
         uses: actions/checkout@v2
       - name: See files
         run: ls -la
+      - name: Crear Archivo Random
+        run: |
+          echo $RANDOM >> random.txt
+          git add random.txt
+          git commit -m "Añadido Random File"
+          git push
