@@ -9,6 +9,6 @@ jobs:
       - name: See files
         run: ls -la
       - name: Checkout
-        run: actions/checkout@2
+        uses: actions/checkout@2
       - name: See files
         run: ls -la
